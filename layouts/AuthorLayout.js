@@ -29,8 +29,8 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="flex space-x-3 pt-6">
               <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="wechat" href={github} />
               <SocialIcon kind="twitter" href={twitter} />
+              <SocialIcon kind="wechat" href={github} />
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>

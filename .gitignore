@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/zz_deploy
+/zz_deploy/config*
 # testing
 /coverage
 
