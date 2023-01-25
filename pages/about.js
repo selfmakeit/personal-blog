@@ -13,12 +13,12 @@ export default function About({ authorDetails }) {
 
   return (
     <>
-    <MDXLayoutRenderer
-      layout={frontMatter.layout || DEFAULT_LAYOUT}
-      mdxSource={mdxSource}
-      frontMatter={frontMatter}
-    />
-    {/* <Hero /> */}
+      <MDXLayoutRenderer
+        layout={frontMatter.layout || DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+      />
+      {/* <Hero /> */}
       <Skills />
     </>
   )

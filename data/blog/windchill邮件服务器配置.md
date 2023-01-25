@@ -94,9 +94,11 @@ wt.mail.smtp.username=sunway\\pdmelement
 
 整个过程中不要直接去更改wt.properties。直接去更改重启后会失效。
 
+```
 执行xconfmanager -i <emailConfig.xconf文件位置> -p 部署配置文件
 
 当配置完成后可以使用xconfmanager -d <属性名>来查看结果是否如预期。
+```
 
 ## 以命令方式：
 

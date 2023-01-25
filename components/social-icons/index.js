@@ -6,7 +6,7 @@ import Linkedin from './linkedin.svg'
 import Twitter from './twitter.svg'
 import siteMetadata from '@/data/siteMetadata'
 import Image from '@/components/Image'
-import { IoLogoGithub, IoLogoLinkedin, IoMail, IoCall,IoLogoWechat } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin, IoMail, IoCall, IoLogoWechat } from 'react-icons/io5'
 // import Popup from "../Popup";
 import { useState } from 'react'
 // Icons taken from: https://simpleicons.org/
@@ -19,71 +19,63 @@ const components = {
   linkedin: Linkedin,
   twitter: Twitter,
 }
-function Pop({title,img,size = 8}){
-  const [showModal, setShowModal] = useState(false);
+function Pop({ title, img, size = 8 }) {
+  const [showModal, setShowModal] = useState(false)
   return (
     <>
       <span
         className="text-sm text-gray-500 transition hover:text-gray-600"
         onClick={() => setShowModal(true)}
       >
-        <IoLogoWechat className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${size} w-${size}`}/>
+        <IoLogoWechat
+          className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${size} w-${size}`}
+        />
       </span>
       {showModal ? (
         <>
-          <div
-            className="justify-center items-center hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-          >
-            <div className="relative w-auto my-6 mx-auto max-w-sm">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none hover:text-blue-500 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400">
+            <div className="relative my-6 mx-auto w-auto max-w-sm">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-center justify-center p-2 pt-1 pb-1 border-b border-solid border-slate-200 rounded-t">
-                  <div className='flex items-end justify-end'>
-                    <h3 className="font-semibold ">
-                      {title}
-                    </h3>
-
+                <div className="flex items-center justify-center rounded-t border-b border-solid border-slate-200 p-2 pt-1 pb-1">
+                  <div className="flex items-end justify-end">
+                    <h3 className="font-semibold ">{title}</h3>
                   </div>
                   <button
-                    className="p-1 ml-auto bg-transparent border-0 float-right text-xl leading-none font-semibold outline-none focus:outline-none"
+                    className="float-right ml-auto border-0 bg-transparent p-1 text-xl font-semibold leading-none outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="h-6 w-6 text-black">
-                      ×
-                    </span>
+                    <span className="h-6 w-6 text-black">×</span>
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-2 pt-1 pb-1 flex-auto">
-                <Image
-                  src={img}
-                  alt="wechat"
-                  width="182px"
-                  height="182px"
-                  className="h-42 w-42"
-                />
+                <div className="relative flex-auto p-2 pt-1 pb-1">
+                  <Image
+                    src={img}
+                    alt="wechat"
+                    width="182px"
+                    height="182px"
+                    className="h-42 w-42"
+                  />
                 </div>
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
         </>
       ) : null}
     </>
-  );
+  )
 }
 const SocialIcon = ({ kind, href, size = 8 }) => {
-  
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
   const SocialSvg = components[kind]
-  if(kind === 'wechat'){
-    return(
-      <Pop img={siteMetadata.wx} title="Wechat" />
-    )
-  }else{
+  if (kind === 'wechat') {
+    return <Pop img={siteMetadata.wx} title="Wechat" />
+  } else {
     return (
       <a
         className="text-sm text-gray-500 transition hover:text-gray-600"
@@ -97,7 +89,6 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
         />
       </a>
     )
-
   }
 }
 
