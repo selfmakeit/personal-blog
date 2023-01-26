@@ -15,7 +15,7 @@ summary: vercel部署时跳过build环节
 
 下图中'contac'为我项目的build输出文件夹：
 
-![image-20230126202104265](https://raw.githubusercontent.com/selfmakeit/resource/main/image-20230126202104265.png)
+![image-20230126210723301](https://raw.githubusercontent.com/selfmakeit/resource/main/image-20230126210723301.png)
 
 ## 在vercel上部署时按照下图操作
 
