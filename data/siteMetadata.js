@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog',
   author: 'CONTAC',
   headerTitle: 'CONTAC-Blog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: '我们行动的源头在于我们禁不住无意识地会自诩为时代的中心、理由与终点...',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://cryptogang.vip/',
