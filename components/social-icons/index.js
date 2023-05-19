@@ -4,6 +4,7 @@ import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
 import Twitter from './twitter.svg'
+import Telegram from './telegram.svg'
 import siteMetadata from '@/data/siteMetadata'
 import Image from '@/components/Image'
 import { IoLogoGithub, IoLogoLinkedin, IoMail, IoCall, IoLogoWechat } from 'react-icons/io5'
@@ -18,6 +19,7 @@ const components = {
   youtube: Youtube,
   linkedin: Linkedin,
   twitter: Twitter,
+  telegram: Telegram,
 }
 function Pop({ title, img, size = 8 }) {
   const [showModal, setShowModal] = useState(false)

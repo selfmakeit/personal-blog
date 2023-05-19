@@ -7,6 +7,7 @@ email: talktogang@gmail.com
 twitter: https://twitter.com/C0NTAC_
 linkedin: https://www.linkedin.com
 github: https://github.com/selfmakeit
+telegram: https://t.me/THJA_JUNGLE
 ---
 A Web developer, tech enthusiast.
 
